@@ -8,8 +8,30 @@
 
 ?>
 <html>
-    <head><title>cv</title></head>
+    <head>
+        <title>cv</title>
+        <script>
+
+            // To-do : this function is incomplete.
+            function bind_radio_listener(name){
+                // name is name of common radio group.
+                var radios = document.getElementsByName(name);
+                for(radio in radios) {
+                    if(radios[radio] == "[object HTMLInputElement]") // not working.
+                    {
+                        radios[radio].onclick = function() {
+                            alert('clicked');
+                        }
+                    }
+                }
+            }
+            bind_radio_listener('which_page');
+
+        </script>
+    </head>
+
     <body>
+
         <div id="top_header">
             <!--This is a top header which defines which html registration form should be selected.-->
             <input type="radio" name="which_page" id="demographic">
@@ -36,5 +58,10 @@
             <label for="employment">employment</label>
         </div>
 
+        <iframe id="main_container" src="#">
+            <!--
+                Body of the dynamically loaded pages will be loaded here.
+            -->
+        </iframe>
     </body>
 </html>
