@@ -1,67 +1,44 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: RishabhBhatnagar
- * Date: 5/12/18
- * Time: 10:15 PM
- */
-
-?>
 <html>
-    <head>
-        <title>cv</title>
-        <script>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<!-- multistep form -->
+<form id="msform">
+    <!-- progressbar -->
+    <ul id="progressbar">
+        <li class="active">Demographic</li>
+        <li>Education</li>
+        <li>Projects</li>
+        <li>Certification </li>
+        <li>Employment</li>
 
-            // To-do : this function is incomplete.
-            function bind_radio_listener(name){
-                // name is name of common radio group.
-                var radios = document.getElementsByName(name);
-                for(radio in radios) {
-                    if(radios[radio] == "[object HTMLInputElement]") // not working.
-                    {
-                        radios[radio].onclick = function() {
-                            alert('clicked');
-                        }
-                    }
-                }
-            }
-            bind_radio_listener('which_page');
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Create your account</h2>
+        <h3 class="fs-subtitle">This is step 1</h3>
+        <input type="text" name="Name" placeholder="Name" />
+        <input type="address" name="address" placeholder="Address" />
+        <input type="text" name="Email" placeholder="Email" />
+        <input type="text" name="Website" placeholder="Website" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+        <input type="text" name="HSC" placeholder="Education" />
+        <input type="text" name="Marks" placeholder="Marks" />
+        <input type="text" name="HSC" placeholder="Education" />
+        <input type="text" name="Marks" placeholder="Marks" />
+        <input type="text" name="HSC" placeholder="Education" />
+        <input type="text" name="Marks" placeholder="Marks" />
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
 
-        </script>
-    </head>
-
-    <body>
-
-        <div id="top_header">
-            <!--This is a top header which defines which html registration form should be selected.-->
-            <input type="radio" name="which_page" id="demographic">
-            <label for="demographic">Demographic</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <input type="radio" name="which_page" id="education">
-            <label for="education">Education</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <input type="radio" name="which_page" id="projects">
-            <label for="projects">Projects</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <input type="radio" name="which_page" id="certification">
-            <label for="certification">Certification</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <input type="radio" name="which_page" id="skill">
-            <label for="skill">Skills</label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <input type="radio" name="which_page" id="employment">
-            <label for="employment">employment</label>
-        </div>
-
-        <iframe id="main_container" src="#">
-            <!--
-                Body of the dynamically loaded pages will be loaded here.
-            -->
-        </iframe>
-    </body>
+    </fieldset>
+</form>
+</body>
 </html>
