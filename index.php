@@ -2,9 +2,10 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script type="text/javascript" src="index.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
+
 <!-- multistep form -->
 <form id="msform">
     <!-- progressbar -->
@@ -18,7 +19,9 @@
     </ul>
     <!-- fieldsets -->
     <fieldset>
-        <h2 class="fs-title">Create your account</h2>
+        <!--
+        <h2 class="fs-title">Pesonal Information</h2>
+        -->
         <h3 class="fs-subtitle">This is step 1</h3>
         <input type="text" name="Name" placeholder="Name" />
         <input type="address" name="address" placeholder="Address" />
