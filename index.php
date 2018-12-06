@@ -1,8 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" >
 <head>
     <link rel="stylesheet" href="index.css">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="index.js"></script
 </head>
+
+<body>
+
 <!-- multistep form -->
 <form id="msform">
     <!-- progressbar -->
@@ -14,7 +17,6 @@
         <li>Employment</li>
 
     </ul>
-
     <!-- fieldsets -->
     <fieldset>
         <h2 class="fs-title">Create your account</h2>
@@ -23,7 +25,7 @@
         <input type="address" name="address" placeholder="Address" />
         <input type="text" name="Email" placeholder="Email" />
         <input type="text" name="Website" placeholder="Website" />
-        <input type="button" name="next" class="next action-button" value="Next" id="name"/>
+        <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
     <fieldset>
         <input type="text" name="HSC" placeholder="Education" />
@@ -35,8 +37,12 @@
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next" class="next action-button" value="Next" />
     </fieldset>
-
     <fieldset>
 
     </fieldset>
 </form>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script  src="index.js"></script>
+</body>
+</html>
