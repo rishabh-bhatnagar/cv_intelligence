@@ -2,8 +2,17 @@ $(document).ready(function(){
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
+var isValid = false;	
 try{
     $(".next").click(function(){
+      $("fieldset").children().not("h2, h3, button").each(function(){
+        if(!$(this).val()){
+        isValid = false;
+        alert("invalid");
+    }else{
+        isValid = true;  
+    } 
+    })
         if(animating) return false;
         animating = true;
 
